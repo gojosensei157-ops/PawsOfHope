@@ -1,0 +1,956 @@
+/* =========================================
+   PAWS OF HOPE
+   MAIN STYLESHEET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f8f2;
+    color: #26332b;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    height: 74px;
+    background: #21864f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+}
+
+.header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+.header nav a:hover::after,
+.header nav a.active::after {
+    width: 100%;
+}
+
+.theme-button {
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 10%;
+    background: #eaf5eb;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title,
+.section-label {
+    color: #21864f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.1;
+    color: #174f32;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #21864f;
+    display: block;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 550px;
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 13px 27px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn.primary {
+    background: #21864f;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #17663b;
+}
+
+.btn.secondary {
+    border-color: #21864f;
+    color: #21864f;
+    background: white;
+}
+
+.btn.secondary:hover {
+    background: #21864f;
+    color: white;
+}
+
+.small-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #21864f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    padding: 80px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.section h2 {
+    color: #174f32;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   MISSION
+========================================= */
+
+.mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    background: white;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.mission-text h2 {
+    font-size: 40px;
+    color: #174f32;
+    margin-bottom: 20px;
+}
+
+.text-button {
+    display: inline-block;
+    margin-top: 20px;
+    color: #21864f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   ANIMAL CARDS
+========================================= */
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.animal-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.09);
+    transition: 0.3s;
+}
+
+.animal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.animal-info {
+    padding: 22px;
+    text-align: center;
+}
+
+.animal-info h3 {
+    color: #174f32;
+    font-size: 23px;
+}
+
+
+/* =========================================
+   HELP SECTION
+========================================= */
+
+.help-section {
+    background: #e2f1e5;
+    padding: 80px 10%;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.help-card {
+    text-align: center;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.help-card:hover {
+    transform: translateY(-8px);
+}
+
+.help-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.page-hero {
+    text-align: center;
+    padding: 100px 10%;
+    background: #e2f1e5;
+}
+
+.page-hero h1 {
+    color: #174f32;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.page-hero p:last-child {
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    background: white;
+}
+
+.about-story img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-story h2 {
+    margin-bottom: 20px;
+}
+
+.about-story p {
+    margin-bottom: 18px;
+}
+
+.values-section {
+    padding: 80px 10%;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    text-align: center;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.value-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   TEAM
+========================================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.team-card {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    background: #d8eddc;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 15px;
+    font-size: 45px;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.service-card h2 {
+    font-size: 22px;
+}
+
+.learn-more {
+    margin-top: 20px;
+    padding: 9px 18px;
+    border: 2px solid #21864f;
+    background: white;
+    color: #21864f;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.learn-more:hover {
+    background: #21864f;
+    color: white;
+}
+
+
+/* =========================================
+   TABLES
+========================================= */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    padding: 12px 0;
+    font-weight: bold;
+    color: #174f32;
+}
+
+th,
+td {
+    padding: 16px;
+    border: 1px solid #d8e5da;
+    text-align: left;
+}
+
+th {
+    background: #21864f;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f0f7f1;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #21864f;
+    background: white;
+    color: #21864f;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #21864f;
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 80px 10%;
+    background: white;
+}
+
+.contact-info h2 {
+    color: #174f32;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.contact-detail {
+    margin-top: 25px;
+}
+
+.contact-detail strong {
+    color: #21864f;
+}
+
+.contact-form-box {
+    background: #f1f8f2;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.contact-form-box h2 {
+    color: #174f32;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #21864f;
+    border-radius: 6px;
+    outline: none;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 3px rgba(33,134,79,0.15);
+}
+
+.form-group small {
+    color: #c62828;
+    display: block;
+    margin-top: 5px;
+}
+
+.form-button {
+    border: none;
+    cursor: pointer;
+}
+
+.success-message {
+    color: #21864f;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   POPUP
+========================================= */
+
+.popup-message {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #21864f;
+    color: white;
+    padding: 16px 25px;
+    border-radius: 8px;
+    display: none;
+    z-index: 3000;
+}
+
+.popup-message.show {
+    display: block;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #17683d;
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    padding: 50px 10%;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+.back-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #21864f;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.back-top.show {
+    display: block;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark {
+    background: #18231c;
+    color: #e9f2eb;
+}
+
+body.dark .hero,
+body.dark .page-hero,
+body.dark .help-section {
+    background: #213329;
+}
+
+body.dark .mission,
+body.dark .about-story,
+body.dark .contact-section {
+    background: #18231c;
+}
+
+body.dark .animal-card,
+body.dark .help-card,
+body.dark .value-card,
+body.dark .team-card,
+body.dark .service-card,
+body.dark .contact-form-box,
+body.dark table {
+    background: #26392d;
+    color: #e9f2eb;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+    color: #d9f2df;
+}
+
+body.dark .section-label {
+    color: #80d49e;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #18231c;
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .hero,
+    .mission,
+    .about-story,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .animal-grid,
+    .value-grid,
+    .team-grid,
+    .help-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 65px;
+        padding: 0 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #21864f;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .header nav.open {
+        display: flex;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .section,
+    .help-section,
+    .contact-section,
+    .values-section {
+        padding: 55px 6%;
+    }
+
+    .service-grid,
+    .animal-grid,
+    .value-grid,
+    .team-grid,
+    .help-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+    }
+
+    .page-hero h1 {
+        font-size: 40px;
+    }
+}

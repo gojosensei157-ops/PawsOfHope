@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+       content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Paws of Hope</title>
+    <meta name="description"
+       content="Contact Paws of Hope to ask about adoption, donation and volunteering.">
+    <meta name="keywords"
+       content="contact animal charity, adoption, donation, volunteer">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body>
+  <header class="header">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png"
+           alt="Paws of Hope logo">
+    </a>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu">
+        ☰
+      </button>
+      <nav id="mainNav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      <button id="themeToggle" class="theme-button"
+      aria-label="Toggle dark mode">
+      🌙
+      </button>
+      </nav> 
+    </header>
+    <main>
+    <section class="page-hero">
+      <p class="section-label">GET IN TOUCH</p>
+      <h1>Contact Us</h1>
+      <p>
+        Have a question? We would love to hear from you.
+      </p>
+    </section>
+    <section class="contact-section">
+    <div class="contact-info">
+      <p class="section-label">CONTACT INFORMATION</p>
+      <h2>Let's Make A Difference Together</h2>
+      <p>
+        Contact us to learn more about adoption,
+        volunteering, donations or animal rescue.
+      </p>
+    <div class="contact-detail">
+      <strong>📍 Location</strong>
+      <p>Kuching, Sarawak, Malaysia</p>
+    </div>
+	
+    <div class="contact-detail">
+      <strong>📞 Phone</strong>
+      <p>+60 12-345 6789</p>
+    </div>
+	
+    <div class="contact-detail">
+      <strong>✉ Email</strong>
+      <p>info@pawsofhope.org</p>
+    </div>
+
+    <div class="contact-detail">
+      <strong>🕒 Opening Hours</strong>
+      <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+    </div>
+    </div>
+
+    <div class="contact-form-box">
+    <h2>Send Us a Message</h2>
+    <form id="contactForm" novalidate>
+    
+	<div class="form-group">
+      <label for="name">
+        Your Name
+      </label>
+      <input type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required>
+        <small id="nameError"></small>
+    </div>
+    <div class="form-group">
+      <label for="email">
+        Email Address
+      </label>
+        <input type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required>
+          <small id="emailError"></small>
+    </div>
+    <div class="form-group">
+      <label for="subject">
+        Subject
+      </label>
+      <input type="text"
+      id="subject"
+      name="subject"
+      placeholder="Enter subject"
+      required>
+      <small id="subjectError"></small>
+    </div>
+    <div class="form-group">
+      <label for="message">
+        Message
+      </label>
+      <textarea id="message"
+        name="message"
+        rows="6"
+        placeholder="Write your message"
+        required></textarea>
+        <small id="messageError"></small>
+    </div>
+      <button type="submit"
+        class="btn primary form-button">
+          Send Message
+       </button>
+    <div id="formSuccess"
+      class="success-message"
+      role="alert">
+    </div>
+    </form>
+    </div>
+    </section>
+    </main>
+    <footer>
+    <div class="copyright">
+      © 2026 Paws of Hope Animal Charity. All Rights Reserved.
+    </div>
+    </footer>
+    <button id="backTop"
+      class="back-top"
+      aria-label="Back to top">
+      ↑
+    </button>
+  </body>
+</html>
